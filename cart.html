@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart - Plant Shop 🌱</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Ensures the container perfectly centers all content inside it */
+        .cart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh; /* Keeps content vertically balanced on the screen */
+            padding: 20px;
+        }
+
+        /* Styling for the cart card to look clean and neat */
+        .cart-box {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .cart-box img {
+            max-width: 150px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<nav style="padding: 10px 20px; background-color: #f4fbf7;">
+    <h1 style="margin: 0; font-size: 1.5rem;">🌱 Your Green Cart</h1>
+</nav>
+
+<div class="cart-container">
+
+    <!-- Fixed the = to : and reduced the massive margin -->
+    <h1 style="margin-bottom: 20px; text-align: center;">🛒 Your Cart</h1>
+
+    <!-- Fixed the = to : and removed the 1000px margin -->
+    <div class="cart-box">
+        <img src="images/card1.jpg" alt="Cart Plant">
+        
+        <h2>Items Added</h2>
+        <p class="count">Total Items: <span id="cartCount">0</span></p>
+
+        <p class="msg">🌿 Keep adding plants to make your home greener!</p>
+
+        <a href="products.html" class="btn">⬅ Continue Shopping</a>
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
