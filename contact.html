@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plant  Paradise - Contact</title>
+
 <style>
 
 /* RESET */
@@ -13,18 +15,15 @@
     font-family:'Poppins',sans-serif;
 }
 
-/* ================= GREEN BACKGROUND FIX ================= */
-
+/* BODY */
 body{
     background:#5cd362;
-    
     min-height:100vh;
 }
 
 /* NAVBAR */
-
 nav{
-    background:linear-gradient #1b5e20;
+    background:#1b5e20;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -33,7 +32,7 @@ nav{
 }
 
 nav h1{
-    color:rgb(5, 5, 5);
+    color:white;
     font-size:28px;
 }
 
@@ -58,9 +57,8 @@ nav ul li a:hover{
 }
 
 /* CONTACT SECTION */
-
 .contact-container{
-    max-width:1200px;
+    max-width:1300px;
     margin:50px auto;
     display:flex;
     gap:40px;
@@ -69,75 +67,64 @@ nav ul li a:hover{
     padding:20px;
 }
 
-/* LEFT SIDE */
-
+/* LEFT SIDE PLANTS */
 .contact-image{
     flex:1;
-    text-align:center;
-}
-
-.main-image{
-    width:100%;
-    max-width:450px;
-    height:450px;
-    object-fit:cover;
-    border-radius:25px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.25);
-}
-
-.plant-gallery{
     display:flex;
     justify-content:center;
-    gap:15px;
-    margin-top:20px;
+    align-items:center;
 }
 
-.plant-gallery img{
-    width:110px;
-    height:110px;
+.plant-circle-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.plant-circle-gallery img{
+    width:130px;
+    height:130px;
     object-fit:cover;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-    transition:.4s;
+    border-radius:50%;
+    border:5px solid white;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    transition:0.4s;
 }
 
-.plant-gallery img:hover{
-    transform:scale(1.1);
+.plant-circle-gallery img:hover{
+    transform:scale(1.1) rotate(5deg);
 }
 
 /* RIGHT SIDE */
-
 .contact-box{
     flex:1;
-    background:rgba(245, 248, 244, 0.932);
-    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.95);
     padding:35px;
     border-radius:25px;
     box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 .contact-box h1{
-    color:#1e1f1e;
+    color:#1b5e20;
     margin-bottom:15px;
 }
 
 .contact-box p{
-    line-height:1.7;
     color:#333;
+    line-height:1.7;
 }
 
 /* COMPANY INFO */
-
 .company-info{
-    background:#06e619;
+    background:#e8f5e9;
     margin:25px 0;
     padding:20px;
     border-radius:15px;
-    border-left:5px solid #2e7d32;
+    border-left:6px solid #2e7d32;
 }
-s
-.company-info h3{
-    color:#94e994;
+
+.company-info h2{
+    color:#1b5e20;
     margin-bottom:10px;
 }
 
@@ -146,7 +133,6 @@ s
 }
 
 /* FORM */
-
 form{
     margin-top:20px;
 }
@@ -160,13 +146,11 @@ form textarea{
     border-radius:12px;
     outline:none;
     font-size:15px;
-    background:#f1fff3;
 }
 
 form input:focus,
 form textarea:focus{
-    border-color:#e3ebe4;
-    background:white;
+    border-color:#2e7d32;
 }
 
 form button{
@@ -182,22 +166,19 @@ form button{
 }
 
 form button:hover{
-    background:#3aa741;
-    transform:translateY(-2px);
+    background:#43a047;
 }
 
 /* FOOTER */
-
 footer{
     text-align:center;
-    background:#1a6820;
+    background:#1b5e20;
     color:white;
     padding:20px;
     margin-top:40px;
 }
 
 /* MOBILE */
-
 @media(max-width:768px){
 
     nav{
@@ -214,8 +195,13 @@ footer{
         flex-direction:column;
     }
 
-    .main-image{
-        height:300px;
+    .plant-circle-gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .plant-circle-gallery img{
+        width:110px;
+        height:110px;
     }
 }
 
@@ -227,6 +213,7 @@ footer{
 <!-- NAVBAR -->
 <nav>
     <h1>🌱 Plant Pot Paradise</h1>
+
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="products.html">Products</a></li>
@@ -238,20 +225,24 @@ footer{
 <!-- CONTACT SECTION -->
 <div class="contact-container">
 
+    <!-- LEFT SIDE -->
     <div class="contact-image">
 
-        <img src="images/logo1.jpg" class="main-image">
-
-        <div class="plant-gallery">
+        <div class="plant-circle-gallery">
             <img src="images/plant1.jpg">
             <img src="images/plant2.jpg">
             <img src="images/plant3.jpg">
-            <img src="images/plant3.jpg">
-            <img src="images/plant3.jpg">
+            <img src="images/plant4.jpg">
+            <img src="images/plant5.jpg">
+            <img src="images/plant6.jpg">
+            <img src="images/plant7.jpg">
+            <img src="images/plant8.jpg">
+            <img src="images/plant9.jpg">
         </div>
 
     </div>
 
+    <!-- RIGHT SIDE -->
     <div class="contact-box">
 
         <h1>🌿 Contact Us</h1>
@@ -262,7 +253,7 @@ footer{
 
         <div class="company-info">
             <h2>🏢 Company Details</h2>
-            <P><strong>🌿PLANT POT PARADISE</strong></P>
+            <p><strong>🌿 PLANT POT PARADISE</strong></p>
             <p>📞 9456200777</p>
             <p>📧 idol07@gmail.com</p>
             <p>📍 Sivakasi</p>
@@ -281,7 +272,7 @@ footer{
 
 <!-- FOOTER -->
 <footer>
-    🌱 Plant Pot Paradise | Green World 🌿
+    🌱 Plant  Paradise | Green World 🌿
 </footer>
 
 </body>
