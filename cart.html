@@ -1,55 +1,108 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Cart - Plant Paradise 🌱</title>
     <link rel="stylesheet" href="css/style.css">
+
     <style>
-        /* Ensures the container perfectly centers all content inside it */
-        .cart-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 80vh; /* Keeps content vertically balanced on the screen */
-            padding: 20px;
+        .cart-container{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            min-height:80vh;
+            padding:20px;
         }
 
-        /* Styling for the cart card to look clean and neat */
-        .cart-box {
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            max-width: 400px;
-            width: 100%;
+        .cart-box{
+            border:1px solid #e0e0e0;
+            border-radius:20px;
+            padding:40px;
+            text-align:center;
+            box-shadow:0 6px 20px rgba(0,0,0,0.08);
+            max-width:700px;
+            width:100%;
+            background:white;
         }
 
-        .cart-box img {
-            max-width: 150px;
-            border-radius: 8px;
-            margin-bottom: 15px;
+        .cart-images{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            margin-bottom:25px;
         }
 
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #2e7d32;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
+        .cart-images img{
+            width:220px;
+            height:220px;
+            object-fit:cover;
+            border-radius:20px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.15);
+            transition:0.4s;
+        }
+
+        .cart-images img:hover{
+            transform:translateY(-8px) scale(1.05);
+        }
+
+        .cart-box h2{
+            color:#2e7d32;
+            margin-bottom:10px;
+            font-size:30px;
+        }
+
+        .count{
+            font-size:20px;
+            font-weight:bold;
+            color:#1b5e20;
+            margin-bottom:10px;
+        }
+
+        .msg{
+            color:#555;
+            margin-bottom:20px;
+            font-size:17px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:15px;
+            padding:12px 25px;
+            background:#2e7d32;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#43a047;
+        }
+
+        @media(max-width:768px){
+
+            .cart-images{
+                flex-direction:column;
+                align-items:center;
+            }
+
+            .cart-images img{
+                width:200px;
+                height:200px;
+            }
+
         }
     </style>
 </head>
+
 <body>
 
-<nav style="padding: 10px 20px; background-color: #f4fbf7;">
-    <h1 style="margin: 0; font-size: 1.5rem;">🌱 Your Green Cart</h1>
+<nav style="padding:10px 20px; background-color:#f4fbf7;">
 
     <div class="logo-container">
-        <img src="images/logo1.jpg" alt="Logo" class="logo">
-        <h1> Plant  Paradise</h1>
+        <img src="images/logo11.jpg" alt="Logo" class="logo">
+        <h1>Plant Paradise</h1>
     </div>
 
     <ul>
@@ -63,23 +116,35 @@
 
 <div class="cart-container">
 
-    <!-- Fixed the = to : and reduced the massive margin -->
-    <h1 style="margin-bottom: 20px; text-align: center;">🛒 Your Cart</h1>
+    <h1 style="margin-bottom:20px;">🛒 Your Cart</h1>
 
-    <!-- Fixed the = to : and removed the 1000px margin -->
     <div class="cart-box">
-        <img src="images/card1.jpg" alt="Cart Plant">
-        
-        <h2>Items Added</h2>
-        <p class="count">Total Items: <span id="cartCount">0</span></p>
 
-        <p class="msg">🌿 Keep adding plants to make your home greener!</p>
+        <div class="cart-images">
+            <img src="images/plant1.jpg" alt="Plant">
+            <img src="images/plant777.jpg" alt="Plant">
+        </div>
 
-        <a href="products.html" class="btn">⬅ Continue Shopping</a>
+        <h2>🌿 Items Added</h2>
+
+        <p class="count">
+            Total Items: <span id="cartCount">0</span>
+        </p>
+
+        <p class="msg">
+            🌱 Keep adding plants to make your home greener!
+        </p>
+
+        <a href="products.html" class="btn">
+            ⬅ Continue Shopping
+        </a>
+
     </div>
 
 </div>
 
 <script src="js/script.js"></script>
+
 </body>
 </html>
+
